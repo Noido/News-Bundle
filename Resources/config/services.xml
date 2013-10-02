@@ -5,17 +5,17 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
-        <parameter key="r3c_news.admin.news.class">R3c\Bundle\NewsBundle\Admin\NewsAdmin</parameter>
-        <parameter key="r3c_news.admin.news.entity">R3c\Bundle\NewsBundle\Entity\News</parameter>
-        <parameter key="r3c_news.admin.news.controller">R3cNewsBundle:NewsAdmin</parameter>
+        <parameter key="r3c.news.admin.news.class">R3c\Bundle\NewsBundle\Admin\NewsAdmin</parameter>
+        <parameter key="r3c.news.admin.news.entity">R3c\Bundle\NewsBundle\Entity\News</parameter>
     </parameters>
     
     <services>
-        <service id="r3c_news.admin.news" class="%r3c_news.admin.news.class%">
+        <service id="r3c.news.admin.news" class="%r3c.news.admin.news.class%">
             <tag name="sonata.admin" manager_type="orm" group="news" label="News"/>
             <argument />
-            <argument>%r3c_news.admin.news.entity%</argument>
-            <argument>%r3c_news.admin.news.controller%</argument>
+            <argument>%r3c.news.admin.news.entity%</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+            <argument type="service" id="service_container"></argument>
         </service>
     </services>
 
