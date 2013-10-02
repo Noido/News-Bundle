@@ -1,22 +1,13 @@
-<?xml version="1.0" ?>
-
 <container xmlns="http://symfony.com/schema/dic/services"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
-
-    <parameters>
-        <parameter key="r3c.news.admin.news.class">R3c\Bundle\NewsBundle\Admin\NewsAdmin</parameter>
-        <parameter key="r3c.news.admin.news.entity">R3c\Bundle\NewsBundle\Entity\News</parameter>
-    </parameters>
-    
+    xsi:schemaLocation="http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
-        <service id="r3c.news.admin.news" class="%r3c.news.admin.news.class%">
-            <tag name="sonata.admin" manager_type="orm" group="news" label="News"/>
-            <argument />
-            <argument>%r3c.news.admin.news.entity%</argument>
+        <service id="r3c.news.admin.news" class="R3c\Bundle\NewsBundle\Admin\NewsAdmin">
+            <tag name="sonata.admin" manager_type="orm" group="News" label="News"/>
+            <argument></argument>
+            <argument>R3c\Bundle\NewsBundle\Entity\News</argument>
             <argument>SonataAdminBundle:CRUD</argument>
             <argument type="service" id="service_container"></argument>
         </service>
     </services>
-
 </container>
