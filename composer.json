@@ -23,7 +23,9 @@
         "sonata-project/jquery-bundle": "1.8.*@dev",
         "sonata-project/easy-extends-bundle" : "dev-master",
         "sonata-project/intl-bundle" : "dev-master",
-        "sonata-project/doctrine-orm-admin-bundle": "dev-master"
+        "sonata-project/doctrine-orm-admin-bundle": "dev-master",
+        "sonata-project/user-bundle": "dev-master",
+        "sonata-project/media-bundle" : "dev-master"
     },
     "autoload": {
         "psr-0": {
