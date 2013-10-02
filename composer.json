@@ -1,0 +1,28 @@
+{
+    "name": "r3c/news-bundle",
+    "description": "Simple news module.",
+    "keywords": ["news"],
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "James Noident",
+            "homepage": "http://www.r3cweb.fr",
+            "email": "jamesfuji2@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.0",
+        "symfony/symfony": ">=2.1",
+        "stof/doctrine-extensions-bundle": "dev-master",
+        "sonata-project/admin-bundle": "dev-master",
+        "sonata-project/doctrine-orm-admin-bundle": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "R3c\\Bundle\\NewsBundle": ""
+        }
+    },
+    "target-dir": "R3c/Bundle/NewsBundle"
+}

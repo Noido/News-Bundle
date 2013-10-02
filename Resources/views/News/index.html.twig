@@ -1,0 +1,13 @@
+{% extends 'R3cNewsBundle::layout.html.twig' %}
+
+{% block title %}Titre de la news / {{ parent() }}{% endblock %}
+
+{% block content %}
+    <h2>Titre news</h2>
+
+    <div class="news-list">
+        {% for one_news in news %}
+            {% include 'R3cNewsBundle:News:_one-news-preview.html.twig' with {'one_news': one_news} %}
+        {% endfor %}
+    </div>
+{% endblock %}
